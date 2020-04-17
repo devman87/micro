@@ -1,0 +1,4 @@
+IndexIgnore */*
+RewriteEngine on
+RewriteRule  ^$ public/    [L]
+RewriteRule  ((?s).*) public/$1 [L]
