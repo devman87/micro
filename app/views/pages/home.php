@@ -1,5 +1,9 @@
-<div class = "container">
-    <h1 class = "welcome"><?php echo $hello;?></h1>
-    <h2><?php echo $content;?></h2>
-</div>
+<h1 class="welcome"><?php echo $hello; ?></h1>
+<?php if (!empty($rows)): ?>
+    <?php foreach ($rows as $row): ?>
+        <p>
+            <a href="/page/<?php echo $row['id'];?>"><?php echo $row['id'] . ' - ' . $row['name'];?></a>
+        </p>
+    <?php endforeach; ?>
+<?php endif; ?>
  
